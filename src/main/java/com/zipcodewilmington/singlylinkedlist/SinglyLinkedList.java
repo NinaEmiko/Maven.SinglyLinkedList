@@ -6,16 +6,19 @@ import java.lang.reflect.Array;
  * Created by leon on 1/10/18.
  */
 public class SinglyLinkedList<T> {
-    public void add(String expected) {
+
+    Node<T>;
+    public void add(T expected) {
+        
     }
 
-    public boolean contains(String expected) {
+    public boolean contains(T expected) {
     }
 
-    public void remove(String expected) {
+    public void remove(T expected) {
     }
 
-    public int find(String value) {
+    public int find(T value) {
     }
 
     public int size() {

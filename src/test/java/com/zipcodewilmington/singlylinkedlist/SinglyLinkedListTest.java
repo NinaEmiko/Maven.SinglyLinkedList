@@ -87,8 +87,8 @@ public class SinglyLinkedListTest {
         SinglyLinkedList<String> newList = singlyLinkedList.copy();
 
         Assert.assertNotEquals(singlyLinkedList.toString(), newList.toString());
-        for (int i = 0; singlyLinkedList.size(); i++){
-            Assert.assertEquals(singlyLinkedList.get(i).data, newList.get(i).data);
+        for (int i = 0; i < singlyLinkedList.size(); i++){
+            Assert.assertEquals(singlyLinkedList.get(i).getData(), newList.get(i).getData());
         }
 
     }
@@ -101,9 +101,9 @@ public class SinglyLinkedListTest {
 
         singlyLinkedList.sort();
 
-        Assert.assertEquals(singlyLinkedList.get(0).data, "First");
-        Assert.assertEquals(singlyLinkedList.get(1).data, "Second");
-        Assert.assertEquals(singlyLinkedList.get(2).data, "Third");
+        Assert.assertEquals(singlyLinkedList.get(0).getData(), "First");
+        Assert.assertEquals(singlyLinkedList.get(1).getData(), "Second");
+        Assert.assertEquals(singlyLinkedList.get(2).getData(), "Third");
 
 
 
