@@ -1,6 +1,6 @@
 package com.zipcodewilmington.singlylinkedlist;
 
-public class Node {
+public class Node<T> {
     T data;
     Node<T> next;
 

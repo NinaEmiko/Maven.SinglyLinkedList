@@ -7,27 +7,62 @@ import java.lang.reflect.Array;
  */
 public class SinglyLinkedList<T> {
 
-    Node<T>;
-    public void add(T expected) {
-        
+    Node<T> head;
+    public void add(T value) {
+        if (head == null) {
+            head = new Node<T>(value);
+        } else {
+            Node<T> current = head;
+            while(current.getNext() != null) {
+                current = current.getNext();
+        }
+            current.setNext(new Node<T>(value));
+        }
     }
 
     public boolean contains(T expected) {
+        Node<T> current = head;
+        while(current != null) {
+            if (current.getData().equals(expected)) {
+                return true;
+            }
+            current = current.getNext();
+        }
+        return false;
     }
 
     public void remove(T expected) {
     }
 
     public int find(T value) {
+        int counter = 0;
+        Node<T> current = head;
+        while(current != null){
+            if (current == value) {
+                counter++;
+                return counter;
+            }
+            current = current.getNext();
+        }
+        return -1;
     }
 
     public int size() {
+        int count = 1;
+        Node<T> current = head;
+        while (current.getNext() != null) {
+            count++;
+            current = current.getNext();
+        }
+        return count;
     }
 
     public int get(int i) {
+        return 0;
     }
 
     public SinglyLinkedList<String> copy() {
+        return null;
     }
 
     public void sort() {
